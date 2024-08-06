@@ -16,7 +16,6 @@ import Cars from "./GroceryItems/Cars";
 import MotorBikes from "./GroceryItems/MotorBikes";
 import Home from "./Pages/Home";
 import PagLayout from "./Pages/PagLayout";
-import { useSelector } from "react-redux";
 
 const Router = createBrowserRouter(
   createRoutesFromElements(
@@ -41,8 +40,6 @@ const Router = createBrowserRouter(
 
 
 function App() {
-  const Data = useSelector((state)=> state.AllGrocery)
-  console.log(Data);
   return (
     <>
       <RouterProvider router={Router} />

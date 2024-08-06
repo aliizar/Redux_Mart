@@ -1,12 +1,11 @@
 import React from 'react'
-import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { addtocart } from '../Reducers/AllGrocery'
 import { Add } from '@mui/icons-material'
 import toast from 'react-hot-toast';
-import MyApiData from './AllItemsArray'
+import MyApiData from './AllItemsArray';
 const AllGrocery = () => {
-  const [GroceryData, setGroceryData] = useState(MyApiData.AllGrocery)
+
   const dispatch = useDispatch()
 
   const SendData = (item) => {
@@ -18,7 +17,7 @@ const AllGrocery = () => {
       <div className="p-4 sm:ml-64">
         <div className='text-white  text-3xl font-serif ml-6 mb-3'> <p>Buy <span className='text-yellow-300'>Groceries</span> From Here:</p></div>
         <div className="p-4 border-2 grid grid-cols-3 space-x-2  border-gray-200 border-dashed rounded-lg dark:border-gray-700">
-          {GroceryData.map((item) => {
+          {MyApiData.AllGrocery.map((item) => {
             return (
               <div className='mt-2' key={item.id}>
                 <>
@@ -34,7 +33,7 @@ const AllGrocery = () => {
                           <p 
                             className="py-72 cursor-pointer text-green-800 font-serif  font-bold bg-center px-4 rounded-full shadow-md"
                           >
-                            Add to Cart  
+                            Add to Cart 
                           </p>
                           <button   onClick={() => SendData(item)} className='font-bold' ><Add style={{fontSize : '30px'}}/></button>
                         </div>

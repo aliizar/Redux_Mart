@@ -29,7 +29,7 @@ const Navbar = () => {
                             activeclassname="border-b-2 border-white"
                         >
                             <div className='flex'>
-                                {/* <img src={Notification} alt="notification" height={30} width={40} /> */}
+                                
                                 <span className='flex' >
                                     <ShoppingCartIcon   style={{ fontSize: 48 }}/>
                                     <p className='font-serif  text-xl text-white'>{carts.length}</p>
